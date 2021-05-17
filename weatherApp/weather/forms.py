@@ -1,6 +1,6 @@
 from django import forms
 
-class MyForm(forms.Form):
-    
+class WeatherForm(forms.Form):
+
     latitude = forms.FloatField()
     longitude = forms.FloatField()
