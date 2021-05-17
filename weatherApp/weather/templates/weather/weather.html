@@ -5,7 +5,8 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
-  <div class="container">
+  <div class="container col-lg-6">
+  <h1> Django Weather App</h1>
   {% load crispy_forms_tags %}
 
     <form method="POST">{% csrf_token %}
@@ -13,12 +14,13 @@
           <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 
-  <h3> Weather Results<h3> <br/>
+  
   {% if results %}
+  <h3> Weather Results<h3> <br/>
   {% for item in results %}
-  <p> {{item}}</P>
+  <p> {{item}}</p>
+  {% endfor %}
   {% else %}
-  <p> Sorry, no results found with the supplied coordinates. Try again with a new set of valid coordinates</p>
   {% endif %}
   </div>
 </body>
