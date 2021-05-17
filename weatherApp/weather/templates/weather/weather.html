@@ -12,6 +12,14 @@
       {{form|crispy }}
           <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+
+  <h3> Weather Results<h3>
+  {% if results %}
+  {% for item in results %}
+  <p> {{item}}</P>
+  {% else %}
+  <p> Sorry, no results found with the supplied coordinates. Try again with a new set of valid coordinates</p>
+  {% endif %}
   </div>
 </body>
 </html>
